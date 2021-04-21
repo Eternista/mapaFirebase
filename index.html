@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/287bffc749.js" crossorigin="anonymous"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+    <!-- <script defer src="other.js"></script> -->
+    <script defer src="script.js"></script>
+    <title>Vacation Map</title>
+  </head>
+  <body>
+    <div class="banner">
+          <h1>Cheap Holiday</h1>
+    </div>
+    <div class="wrapper">
+        <img src="./images/form-image.jpg" alt="kid">
+        <div class="inputs">
+          <h2>Have you been on any cheap vacation that you have great memories?</h2>
+          <p>Don't keep it a secret, share it with others so they can enjoy being there too.</p>
+          <div class="form">
+            <div>
+              <label for="where">Where</label>
+              <input class="whereInput" name="where" type="text" placeholder="Where">
+            </div>
+            <div>
+              <label for="photo">Photo</label>
+              <input class="photoInput" name="photo" placeholder="photo" type="file">
+            </div>
+            <div>
+              <label for="cost">Cost/Day</label>
+              <input class="costInput" name="cost" type="text" placeholder="Cost">
+            </div>
+            <div>
+              <label for="description">Description</label>
+              <textarea class="descInput" name="description" placeholder="Description" cols="30" rows="10"></textarea>
+            </div>
+            <p>Click on the place on the map to add location parametrs<br>lat: <span id="lat">none</span> lng: <span id="lng">none</span></p>
+            <button class="submit">Add</button>
+          </div>
+        </div>
+    </div>
+    <div class="info hidden"></div>
+    <div class="mapRow">
+      <i class="fas fa-map-signs"></i>
+      <ul class="places">
+        <h3>Vacation</h3>
+      </ul>
+      <div id="map"></div>
+    </div>
+    <section class="footer shape">
+      <h2>Made by <img src="./images/MyLogo.svg" alt="My Logo"></h2>
+    </section>
+  </body>
+</html>

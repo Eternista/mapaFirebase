@@ -1,0 +1,91 @@
+.wrapper {
+    padding: 80px 0;
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    img {
+        width: 40%;
+        object-fit: cover;
+    }
+    .inputs {
+        width: 60%;
+        padding: 0 40px;
+    }
+    h2 {
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+    .form {
+        div {
+            * {
+                display: block;
+                margin-bottom: 15px;
+            }
+            label {
+                font-weight: 700;
+            }
+            input, textarea {
+                resize: none;
+                width: 100%;
+                padding: 10px 20px;
+                background-color: #f6f6f6;
+                border: 1px solid #d6d6d6;
+                color: #333;
+                border: none;
+                font-size: 18px;
+                // border: 1px solid $color-primary;
+                // border-left: 3px solid $color-primary;
+            }
+        }
+        button {
+            margin-bottom: 0;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            border: 1px solid #333;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .3s linear;
+            margin-left: auto;
+            &:hover {
+                background-color: #333;
+                color: #fff;
+            }
+            font-size: 18px;
+            background-color: transparent;
+        }
+    }
+}
+@media all and (max-width: 1140px) {
+    .wrapper {
+        img {
+            display: none;
+        }
+        .inputs {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            h2, p {
+                width: calc(100% - 80px);
+                margin: 0 auto 20px;
+            }
+            div {
+                width: 100%;
+                input, textarea, label {
+                    width: calc(100vw - 80px);
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            button {
+                margin-left: 40px;
+                margin-right: 40px;
+            }
+        }
+    }
+}
