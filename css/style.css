@@ -80,8 +80,20 @@ h1 {
   }
 }
 
+@media all and (max-width: 500px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+
 h2 {
   font-size: 30px;
+}
+
+@media all and (max-width: 500px) {
+  h2 {
+    font-size: 25px;
+  }
 }
 
 .banner {
@@ -115,6 +127,12 @@ h2 {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
+}
+
+@media all and (max-width: 996px) {
+  .mapRow {
+    height: 500px;
+  }
 }
 
 .mapRow i {
@@ -244,8 +262,8 @@ h2 {
 @media all and (max-width: 996px) {
   .mapRow #map {
     width: 100%;
-    height: calc(100vh - 80px);
-    margin: 40px 0;
+    height: 100%;
+    margin-bottom: 60px;
   }
 }
 
@@ -445,6 +463,8 @@ h2 {
 .info .mainInfo img {
   width: 40%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .info .mainInfo .infoContent {
@@ -453,7 +473,36 @@ h2 {
 }
 
 .info .mainInfo .infoContent h2 {
-  font-size: 35px;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+@media all and (max-width: 750px) {
+  .info .mainInfo {
+    min-width: 0;
+    max-width: 100%;
+    width: calc(100% - 40px);
+    max-height: 100%;
+    height: calc(100% - 40px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .info .mainInfo img {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .info .mainInfo {
+    width: calc(100% - 80px);
+    height: calc(100% - 80px);
+  }
+  .info .mainInfo img {
+    height: 200px;
+  }
 }
 
 .info.hidden {

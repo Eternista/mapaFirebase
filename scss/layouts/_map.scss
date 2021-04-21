@@ -1,6 +1,9 @@
 .mapRow {
     display: flex;
     height: 100vh;
+    @media all and (max-width: 996px) {
+        height: 500px;
+    }
     i {
         display: none;
         @media all and (max-width: 996px){
@@ -89,8 +92,8 @@
         width: calc(100% - 400px);
         @media all and (max-width: 996px) {
             width: 100%;
-            height: calc(100vh - 80px);
-            margin: 40px 0;
+            height: 100%;
+            margin-bottom: 60px;
         }
     }
     .leaflet-popup-content-wrapper {

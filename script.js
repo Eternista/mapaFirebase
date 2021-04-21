@@ -83,7 +83,9 @@ navigator.geolocation.getCurrentPosition(function(position) {
         li.appendChild(btn);
         btn.innerHTML = 'info';
         btn.addEventListener('click', () => {
-          info.classList.remove('hidden')
+          info.classList.remove('hidden');
+          placesMenu.classList.remove('active');
+          document.querySelector('.places').classList.remove('active');
           info.innerHTML =
           `<div class="mainInfo">
               <img src="${doc.data().photo}">
