@@ -335,7 +335,8 @@ h2 {
 }
 
 .wrapper p {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-size: 25px;
 }
 
 .wrapper .form {
