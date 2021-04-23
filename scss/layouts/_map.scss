@@ -28,7 +28,7 @@
         padding: 40px 20px;
         width: 400px;
         background-color: rgb(5, 219, 242);
-        color: #333;
+        // color: #333;
         @media all and (max-width: 996px){
             position: fixed;
             top: 0;
@@ -85,7 +85,7 @@
                 border:1px solid rgb(5, 219, 242);
                 margin: 0;
                 background-color: transparent;
-                color: #333;
+                // color: #333;
                 transition: .3s linear;
                 cursor: pointer;
                 &:hover {
