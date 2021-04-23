@@ -109,7 +109,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
           })
         })
         L.marker([doc.data().lat, doc.data().lng]).addTo(map)
-        .bindPopup(`<div class="popUp"><img src="${doc.data().photo}"><div class="popUp-content"><span>${doc.data().where}</span> <span>Per day: ${doc.data().cost}$</span></div></div>`)
+        .bindPopup(`<div class="popUp"><img src="${doc.data().photo}"><div class="popUp-content"><span>${doc.data().where}: </span> <span>${doc.data().cost}$/Day</span></div></div>`)
         .openPopup();
         })
       })
@@ -129,9 +129,18 @@ navigator.geolocation.getCurrentPosition(function(position) {
     add.addEventListener('click', (e) => {
       e.preventDefault();
       if(whereInput.value === "" || costInput.value === "" || descInput.value === ""|| !photoInput.files[0].name.match(/.(jpg|jpeg|png|gif)$/i) || placeLat.textContent === "none" || placeLng.textContent === "none") {
-        alert("Input's can't be empty, or remember to add an image and click on the map");
-        // console.log(whereInput.value, costInput.value, descInput.value, photoInput.files[0].name.match(/.(jpg|jpeg|png|gif)$/i));
+        alert("Some of input's are empty or you don't click the map");
+        document.querySelectorAll('.input').forEach(single => {
+          if(single.value === '' || single.textContent ==="none") {
+            single.classList.add('wrong');
+          }else {
+            single.classList.remove('wrong');
+          }
+        })
       } else {
+        document.querySelectorAll('.input').forEach(single => {
+          single.classList.remove('wrong');
+        })
 
         const onFileChange = async () => {
           const file = photoInput.files[0];

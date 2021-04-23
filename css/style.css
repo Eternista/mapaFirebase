@@ -275,6 +275,10 @@ h2 {
   }
 }
 
+.mapRow .leaflet-popup-content-wrapper, .mapRow .leaflet-popup-tip {
+  background: #05dbf2 !important;
+}
+
 .mapRow .leaflet-popup-content-wrapper {
   padding: 0 !important;
 }
@@ -293,6 +297,11 @@ h2 {
   width: fit-content;
   margin: 0 auto;
   display: block;
+  color: #fff;
+}
+
+.mapRow .leaflet-popup-content-wrapper .leaflet-popup-content .popUp {
+  text-align: center;
 }
 
 .mapRow .leaflet-popup-content-wrapper .leaflet-popup-content .popUp img {
@@ -305,8 +314,15 @@ h2 {
 }
 
 .mapRow .leaflet-popup-content-wrapper .leaflet-popup-content .popUp .popUp-content {
+  margin-top: -5px;
   padding: 5px 10px;
   font-size: 15px;
+  background-color: #05dbf2;
+  color: #fff !important;
+}
+
+.mapRow .leaflet-popup-content-wrapper .leaflet-popup-content .popUp .popUp-content span {
+  color: #fff;
 }
 
 .wrapper {
@@ -329,17 +345,16 @@ h2 {
   margin-bottom: 80px;
 }
 
-.wrapper h2 {
+.wrapper .inputs .information h2 {
   line-height: 1.5;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
-.wrapper p {
-  margin-bottom: 30px;
+.wrapper .inputs .information p {
   font-size: 25px;
 }
 
-.wrapper .form {
+.wrapper .inputs .form {
   background-color: #F6F6F6;
   padding: 80px;
   width: 100%;
@@ -347,27 +362,40 @@ h2 {
   border-radius: 12px;
 }
 
-.wrapper .form div * {
+.wrapper .inputs .form #lat.wrong, .wrapper .inputs .form #lng.wrong {
+  color: crimson;
+}
+
+.wrapper .inputs .form div * {
   display: block;
   margin-bottom: 20px;
 }
 
-.wrapper .form div label {
+.wrapper .inputs .form div label {
   font-weight: 700;
   margin-left: 20px !important;
 }
 
-.wrapper .form div input, .wrapper .form div textarea {
+.wrapper .inputs .form div input, .wrapper .inputs .form div textarea {
   resize: none;
   width: 100%;
   padding: 10px 20px;
   background-color: #ffffff;
+  border-radius: 12px;
   color: #333;
   border: none;
   font-size: 18px;
 }
 
-.wrapper .form button {
+.wrapper .inputs .form div input.wrong, .wrapper .inputs .form div textarea.wrong {
+  border: 1px solid crimson;
+}
+
+.wrapper .inputs .form p {
+  margin-bottom: 20px;
+}
+
+.wrapper .inputs .form button {
   margin-bottom: 0;
   padding: 10px 20px;
   text-transform: uppercase;
@@ -378,11 +406,12 @@ h2 {
   cursor: pointer;
   -webkit-transition: .3s linear;
   transition: .3s linear;
+  border-radius: 12px;
   width: 100%;
   font-size: 18px;
 }
 
-.wrapper .form button:hover {
+.wrapper .inputs .form button:hover {
   background-color: crimson;
   border-color: crimson;
 }
