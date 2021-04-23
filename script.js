@@ -41,7 +41,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
   }).addTo(map);
 
   L.marker([latitude, longitude]).addTo(map)
-      .bindPopup('You are here!')
+      .bindPopup('<span class="userLocalization">You are here!</span>')
       .openPopup();
 
     //GETTING INFO FROM MAP
@@ -127,6 +127,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
     // })
 
     add.addEventListener('click', (e) => {
+      e.preventDefault();
       if(whereInput.value === "" || costInput.value === "" || descInput.value === ""|| !photoInput.files[0].name.match(/.(jpg|jpeg|png|gif)$/i) || placeLat.textContent === "none" || placeLng.textContent === "none") {
         alert("Input's can't be empty, or remember to add an image and click on the map");
         // console.log(whereInput.value, costInput.value, descInput.value, photoInput.files[0].name.match(/.(jpg|jpeg|png|gif)$/i));

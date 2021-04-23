@@ -4,13 +4,22 @@
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    img {
-        width: 40%;
-        object-fit: cover;
-    }
+    // img {
+    //     width: 40%;
+    //     object-fit: cover;
+    //     box-shadow: 0px 8px 12px rgba(48, 42, 54, 0.2);
+    //     border-radius: 12px;
+    // }
     .inputs {
-        width: 60%;
-        padding: 0 40px;
+        // width: 60%;
+        width: 100%;
+        // padding: 0 40px;
+        // padding-left: 80px;
+        .information {
+            max-width: 800px;
+            margin: 0 auto;
+            margin-bottom: 80px;
+        }
     }
     h2 {
         line-height: 1.5;
@@ -20,20 +29,26 @@
         margin-bottom: 20px;
     }
     .form {
+        background-color: #F6F6F6;
+        padding: 80px;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 12px;
         div {
             * {
                 display: block;
-                margin-bottom: 15px;
+                margin-bottom: 20px;
             }
             label {
                 font-weight: 700;
+                margin-left: 20px !important;
             }
             input, textarea {
                 resize: none;
                 width: 100%;
                 padding: 10px 20px;
-                background-color: #f6f6f6;
-                border: 1px solid #d6d6d6;
+                background-color: #ffffff;
+                // border-radius: 12px;
                 color: #333;
                 border: none;
                 font-size: 18px;
@@ -45,18 +60,19 @@
             margin-bottom: 0;
             padding: 10px 20px;
             text-transform: uppercase;
-            border: 1px solid #333;
-            color: #333;
+            border: 1px solid rgba(5, 219, 242, 0.6);
+            color: #fff;
+            background-color: rgba(5, 219, 242, 0.6) ;
             font-weight: bold;
             cursor: pointer;
             transition: .3s linear;
-            margin-left: auto;
+            // border-radius: 12px;
+            width: 100%;
             &:hover {
-                background-color: #333;
-                color: #fff;
+                background-color: crimson;
+                border-color: crimson;
             }
             font-size: 18px;
-            background-color: transparent;
         }
     }
 }
@@ -67,7 +83,7 @@
         }
         .inputs {
             width: 100%;
-            margin: 0 auto;
+            margin: 0 40px;
             padding: 0;
             h2, p {
                 width: calc(100% - 80px);
@@ -76,7 +92,7 @@
             div {
                 width: 100%;
                 input, textarea, label {
-                    width: calc(100vw - 80px);
+                    width: 100%;
                     display: block;
                     margin-left: auto;
                     margin-right: auto;

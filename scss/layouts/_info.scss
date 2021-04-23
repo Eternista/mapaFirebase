@@ -19,6 +19,7 @@
         height: 100%;
         display: flex;
         position: relative;
+        align-items: center;
         .close {
             position: absolute;
             top: -20px;
@@ -46,9 +47,13 @@
             max-height: 100%;
             height: calc(100% - 40px);
             flex-direction: column;
+            align-items: flex-start;
             img {
                 width: 100%;
                 height: 300px;
+            }
+            .infoContent {
+                width: 100%;
             }
         }
         @media (max-width: 500px) {
