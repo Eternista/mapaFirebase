@@ -8,12 +8,12 @@ placesMenu.addEventListener('click', () => {
 
   // Your web app's Firebase configuration
   var firebaseConfig = {
-    apiKey: "AIzaSyDveXq4Fx1sQ9nQm-WCMg4Z--oIK6K5kbk",
-    authDomain: "vacation-map-1b13d.firebaseapp.com",
-    projectId: "vacation-map-1b13d",
-    storageBucket: "vacation-map-1b13d.appspot.com",
-    messagingSenderId: "833595704987",
-    appId: "1:833595704987:web:e83cdb164e11c99c66283e"
+    apiKey: "AIzaSyDISr6ext3IYSUthDHx9jcYyua8j9XqoGc",
+    authDomain: "vacation-map-8783c.firebaseapp.com",
+    projectId: "vacation-map-8783c",
+    storageBucket: "vacation-map-8783c.appspot.com",
+    messagingSenderId: "1081992758332",
+    appId: "1:1081992758332:web:55d5b289cb6234f3a6af39"
   };
   // Initialize Firebase
   var app = firebase.initializeApp(firebaseConfig);
